@@ -37,6 +37,15 @@ module.exports = {
             })
         })
     },
+    users_create: async(data) => {
+        return await new Promise((resolve, reject) => {
+            axios.post(`${process.env.API_URL}/users`, data).then((result) => {
+                resolve(result.data)
+            }).catch((err) => {
+                reject(err)
+            })
+        })
+    },
     mailSender: async(token, mailData) => {
         return await new Promise((resolve, reject) => {
             axios.post(`${process.env.API_URL}/users/mailer`, mailData, {

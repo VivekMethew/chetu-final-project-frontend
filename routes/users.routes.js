@@ -24,6 +24,10 @@ router.get('/login', usersController.get_login)
 
 router.post('/login', usersController.post_login)
 
+router.get('/register', usersController.get_register)
+
+router.post('/register', usersController.post_regsiter)
+
 router.get('/logout', (req, res) => {
     req.session.destroy()
     res.redirect('/login')

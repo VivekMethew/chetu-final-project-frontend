@@ -61,6 +61,28 @@ module.exports = {
                 res.redirect('/login')
             })
     },
+    get_register: async(req, res) => {
+        res.render('default/registere', { message: null })
+    },
+    post_regsiter: async(req, res) => {
+        // console.log(req.body)
+        if (req.body.password === req.body.cpassword) {
+            await fetch_users.users_create({
+                    email: req.body.email,
+                    password: req.body.password
+                })
+                .then(d => {
+                    // console.log(d)
+                    res.redirect('/login')
+                }).catch(err => {
+                    // console.log(err)
+                    res.render('default/registere', { message: 'User Allready exist' })
+                })
+        } else {
+            res.render('default/registere', { message: 'Password does not match!!!' })
+        }
+
+    },
     createMailer: async(req, res) => {
         // console.log(req.body)
         await fetch_users.mailSender(req.session.access_token, req.body)
