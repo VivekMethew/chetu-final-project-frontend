@@ -1,0 +1,35 @@
+.chat-section .container .row .col-lg-5 .messages-box {
+    background: #f5f6fa;
+    padding: 11px;
+}
+
+.chat-section .container .row .col-lg-5 .messages-box .chat-messages {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.chat-section .container .row .col-lg-5 .messages-box .chat-messages::-webkit-scrollbar {
+    width: 0px;
+}
+
+.chat-section .container .row .col-lg-5 .messages-box .chat-messages ul .messages-left {
+    text-align: start;
+    list-style: none;
+}
+
+.chat-section .container .row .col-lg-5 .messages-box .chat-messages ul .messages-right {
+    text-align: right;
+    list-style: none;
+}
+
+.chat-section .container .row .col-lg-5 .messages-box .send-box-messages form input {
+    width: 80%;
+    padding: 6px;
+}
+
+.chat-section .container .row .col-lg-5 .messages-box .send-box-messages form button {
+    width: 18%;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: 800;
+}

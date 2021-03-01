@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/default/head')%>
+
+    <body>
+        <%- include('../partials/default/header')%>
+
+            <div class="chat-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 p-3">
+                            <div class="messages-box">
+                                <div class="chat-messages">
+                                    <ul id="messageContainer">
+
+                                    </ul>
+                                </div>
+                                <div class="send-box-messages">
+                                    <form id="formMessages">
+                                        <input type="text" name="messagesText" placeholder="messages">
+                                        <button>SEND</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 p-3">
+                            <h3 class="h4">USERS</h3>
+                            <ul>
+                                <li>users1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <%- include('../partials/default/foot')%>
+
+                <script src="/socket.io/socket.io.js"></script>
+                <script src="/public/js/main.js"></script>
+    </body>
+
+</html>
